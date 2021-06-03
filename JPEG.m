@@ -23,12 +23,11 @@ P2=[];
 
 disp('This loop will run till the iteration value reaches')
 disp(Ia*Ib/64);
-
+disp('waitting...');
 for i=1:1:Ia*Ib/64
     a=length(A2);
     A2=encode(Z(i,:),A2);
     P2=decode(A2,P2,a+1,i);
-    disp(i);
 end
 
 J=zig_zag(P2,2,Ia,Ib);
